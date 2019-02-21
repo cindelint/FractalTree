@@ -26,6 +26,7 @@ public void draw()
 {
 	background(165, 191, 204);
 	stroke(0);
+	strokeWeight(6);
 	line(320,480,320,380);
 	drawBranches(320,380,80,Math.PI/2);
 }
@@ -41,6 +42,7 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 	finY2 = (int) (y - newLength * Math.sin(newAng2));
 
 	stroke((float) (30-branchLength), (float) (71-branchLength), (float) (29-branchLength));
+	strokeWeight((float) branchLength/15);
 	line(x,y,finX1,finY1);
 	line(x,y,finX2,finY2);
 
